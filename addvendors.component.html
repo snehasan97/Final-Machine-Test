@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<div class="bg">
+    <br><br><br>
+<div class="container border border-secondary shadow-lg p-3 mb-5 bg-white rounded" style="width:850px;max-width:850px;background-image: linear-gradient(to right,rgb(255, 255, 255), white);"> 
+    <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            rel="stylesheet">
+    
+    
+            <div class="container">
+                    <a routerLink="/viewvendors"><img src="assets/back.jpg" style="width:30px;"/></a> 
+                    <h2 class="d-flex justify-content-center">ADD NEW VENDOR</h2>
+                    <hr>
+                    <section id="cover">
+                                
+              <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">VENDOR NAME *</label>
+                     <div class="col-10">
+                        <input class="form-control" type="text" [(ngModel)]="vendor.vendorName" name="vendorName" pattern="/^[A-Za-z]+$/" required>
+                      </div>
+             </div>
+             <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">ADDRESS *</label>
+                  <div class="col-10">
+                    <textarea class="form-control" rows="3"[(ngModel)]="vendor.address" name="address" required></textarea>
+                  </div>
+             </div>
+                    
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">LOCATION *</label>
+                        <div class="col-10">
+                            <select class="form-control" [(ngModel)]="vendor.location" name="location" required>
+                                                                        
+                                <option>Trivandrum</option>
+                                <option>Chennai</option>
+                                <option>Banglore</option>
+                             </select>
+                        </div>
+                    </div> 
+
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">SERVICE *</label>
+                             <div class="col-10">
+                                <input class="form-control" type="text" [(ngModel)]="vendor.service" name="service" pattern="/^[A-Za-z]+$/" required>
+                              </div>
+                     </div>
+
+                     <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">PINCODE *</label>
+                             <div class="col-10">
+                                <input class="form-control"  [(ngModel)]="vendor.pincode" name="pincode" id="" required>
+                              </div>
+                     </div>
+
+                <h2 class="d-flex justify-content-center">ADD NEW CONTACT</h2>
+
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-2 col-form-label">CONTACT NAME *</label>
+                         <div class="col-10">
+                            <input class="form-control" type="text" [(ngModel)]="vendor.contactName" name="contactName" pattern="/^[A-Za-z]+$/" required>
+                          </div>
+                </div>
+
+
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">DEPT * </label>
+                        <div class="col-10">
+                                <input class="form-control" type="text" [(ngModel)]="vendor.department"  name="department" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="example-email-input" class="col-2 col-form-label">EMAIL *</label>
+                        <div class="col-10">
+                            <input class="form-control" [(ngModel)]="vendor.eMail" name="eMail" type="email" id="">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="example-tel-input" class="col-2 col-form-label">PHONE *</label>
+                        <div class="col-10">
+                            <input class="form-control" type="tel" [(ngModel)]="vendor.phone"  name="phone" id="" pattern ="^[0-9]*$" required>
+                        </div>
+                    </div>
+                    
+                
+                    <br>
+                    <a routerLink="/viewvendors" style="margin-left:400px" (click)="addVendor()" type="button" class="btn btn-primary">SAVE</a>
+
+                    </section>
+                    </div>
+                    <br><br><br>
+                    </div>
+                    <br><br><br>

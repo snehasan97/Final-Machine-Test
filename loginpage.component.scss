@@ -1,0 +1,58 @@
+body,
+html {
+  height: 100%;
+}
+
+.login-box
+{
+  width: 180px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color:black;
+}
+.login-box h1{
+  float: left;
+  font-size: 40px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.textbox
+{
+  width:50%;
+  overflow:hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin:8px 0;
+  border-bottom: 1px solid;
+  color:black;
+}
+.textbox i
+{
+  width:26px;
+  float:left;
+  text-align: center;
+  color:black;
+}
+
+.textbox input{
+  border:none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  width:80px;
+  float: left;
+  margin: 0 10px;
+  color:black;
+}
+.button
+{
+  width:50%;
+  background: none;
+  border:2px solid;
+  color:black;
+  padding: 5px;
+
+}

@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<div class="bg">
+    <br><br><br>
+<div class="container border border-secondary shadow-lg p-3 mb-5 bg-white rounded" style="width:800px;max-width:800px;background-image: linear-gradient(to right,white, white);"> 
+<link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <a routerLink="/addvendors" class="btn btn-dark" style="float:right;">Add Vendor</a>
+    <h4 style="margin-left:250px;">VENDORS CONTACT LIST</h4>
+
+<br/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container input-group md-form form-sm form-1 pl-0" style="width:400px;">
+    <div class="input-group-prepend">
+      <span class="input-group-text cyan lighten-2" id="basic-text1"><i class="fa fa-search"
+          aria-hidden="true"></i></span>
+    </div>
+    <input class="form-control my-0 py-1" type="text" placeholder="Search by name/location/service..."  [(ngModel)]="searchString" (ngModelChange)="searchVendor(searchString)"aria-label="Search">
+   <button (click)="searchVendor(searchString)" class="btn-outline-info">Search</button>
+  </div>
+
+<br/>
+<div class="container">
+    <br>
+    <table class="table-bordered table-hover" style="margin-left:-10px; width:750px;margin-bottom:40px; text-align:center;">
+        <thead class="thead-light">
+            <tr>
+                <th>Vendor Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Location</th>
+                <th>Service</th>
+                <th>Contact Name</th>
+                <th>Ph No</th>
+              
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-striped table-hover">
+            <tr *ngFor="let vendor of vendors">
+                    <td>{{vendor.vendorId}}</td>
+                    <td>{{vendor.vendorName}}</td>
+                    <td>{{vendor.address}}</td>
+                    <td>{{vendor.location}}</td>
+                    <td>{{vendor.service}}</td>
+                    <td>{{vendor.contactName}}</td>
+                    <td>{{vendor.phone}}</td>
+                   
+                    <td><button routerLink="/addvendors"(click) = "editVendor(vendor.vendorId)"><img src="assets/edit.jpg" style="width:25px;"/></button>&nbsp;&nbsp;
+                      <!-- <button mwlConfirmationPopover
+                      [popoverTitle]="popoverTitle"
+                      [popoverMessage]="popoverMessage" -->
+                      <button (click) = "disableVendor(vendor.vendorId)"><img src="assets/disable.jpg" style="width:25px;"/></button>&nbsp;&nbsp;
+                    </td>
+            </tr> 
+        </tbody>
+    </table>
+
+    <a routerLink="" style="margin-left:400px"  type="button" class="btn btn-primary">Logout</a>
+
+</div>
+<!-- <div style="margin-left: 250px;">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div> -->
+</div>
+<br><br><br>
+</div>
